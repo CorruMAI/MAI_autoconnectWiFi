@@ -42,6 +42,7 @@ else
         exit 0
     elif [[ $command == "install" || $command == "i" ]]; then
         echo "Start installing..."
+        chmod +x $0
         #save old cron tasks
         oldcrontask=$(crontab -l)
         if [[ $? > 1 ]]; then #check exit code for last command (crontab -l)
